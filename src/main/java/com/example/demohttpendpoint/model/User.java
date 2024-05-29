@@ -1,6 +1,8 @@
 package com.example.demohttpendpoint.model;
 
 
+import jakarta.validation.constraints.NotBlank;
+import jakarta.validation.constraints.NotNull;
 import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
@@ -11,18 +13,15 @@ import lombok.NoArgsConstructor;
 @AllArgsConstructor
 public class User {
 
-//    @Id
-//    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    @NotNull
     private Long id;
 
-//    @NotBlank(message = "Username is required")
-//    @Column(unique = true)
+    @NotBlank(message = "Username is required")
     private String username;
 
-//    @NotNull(message = "Telephone is required")
-//    @Min(value = 10000000, message = "Telephone number must be at least 8 digits")
+    @NotNull(message = "Telephone is required")
     private Integer telephone;
 
-//    @NotBlank(message = "Language is required")
+    @NotBlank(message = "Language is required")
     private String language;
 }
