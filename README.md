@@ -26,6 +26,8 @@ curl -X POST http://localhost:8080/user -H 'Content-Type: application/json' -d '
 ## Limitations
 Currently, the code only supports a single-node environment and does not support horizontal scaling. If horizontal scaling is required, distributed KV storage and a load balancer need to be implemented.
 
+Actually, I once implemented a distributed KV database using the Paxos algorithm, the address is as follows: https://github.com/DevinLee147/cs5223-labs
+
 ## TODO and Improvements
 
 - **Implement HTTPS for enhanced security:** 
